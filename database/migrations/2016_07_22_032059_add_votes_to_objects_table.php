@@ -13,7 +13,7 @@ class AddVotesToObjectsTable extends Migration
     public function up()
     {
 
-        Schema::table('objects', function (Blueprint $table) {
+        Schema::create('objects', function (Blueprint $table) {
             $table->increments('oid');
             $table->string('objcolor');
             $table->integer('width');
