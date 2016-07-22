@@ -8,3 +8,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/objectList', ['middleware' => 'auth',function () {
+   echo json_encode(App\Object::all());
+}]);

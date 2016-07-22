@@ -7,11 +7,25 @@
             <div class="panel panel-default">
                 <div class="panel-heading">List of Objects</div>
                 <div class="panel-body">
-                    <div class="col-sm-4 col-md-4">
+                    <div class="col-sm-4 col-md-4" ng-controller="customerCtrl2" ng-init="customerCtrl2.initialize()">
                         <div class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> 
                         <a href="#" class="btn btn-primary" role="button">Object List<span class="caret"></span></a>
                         </div>
-                    </div>
+                        <ul class="dropdown-menu">
+                        <li ng-repeat="x in myData">
+                              <div>
+                                    <strong style="color:<%x.objcolor%>"><%x.objcolor%>: </strong>
+                                    <span class="pull-right text-muted">
+                                        <em><%x.shape%></em>
+                                    </span>
+                                </div>
+                               
+                            <!-- <div class='divider'/>                           -->
+                        </li>
+                        </ul>
+                        </div>
+             
+             
                     <div class="col-sm-4 col-md-4"><a href="" class="btn btn-success" role="button">Show All Objects</a></div>
                     <div class="col-sm-4 col-md-4"><a href="" class="btn btn-warning" role="button">Admin Page</a></div>
                 </div>
